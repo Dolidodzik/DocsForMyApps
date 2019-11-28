@@ -4,11 +4,21 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { HeaderComponent } from './header/header.component';
+import { CodeblockComponent } from './codeblock/codeblock.component';
+import { TextComponent } from './text/text.component';
+import { OverviewComponent } from './overview/overview.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent
+    NavbarComponent,
+    HeaderComponent,
+    CodeblockComponent,
+    TextComponent,
+    OverviewComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

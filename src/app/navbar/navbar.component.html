@@ -12,13 +12,25 @@
   <div class="collapse navbar-collapse"
        [ngClass]="{ 'show': navbarOpen }">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
-        <a class="nav-link" href="#"> Item 1 </a>
-      </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="#"> Item 2 </a>
+        <a class="nav-link" href="#"> Overview </a>
       </li>
+
+      <li class="nav-item dropdown" >
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown"> Page </a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#"> Foodie </a>
+        </div>
+      </li>
+
+      <li class="nav-item dropdown" >
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown"> Part </a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#"> Welcome </a>
+        </div>
+      </li>
+
     </ul>
   </div>
 </nav>
