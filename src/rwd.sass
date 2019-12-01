@@ -1,0 +1,9 @@
+$xl: 1200px
+$lg: 992px
+$med: 768px
+$sm: 576px
+$xs: 0px
+
+@mixin responsive($query)
+    @media ( min-width: + $query )
+        @content
