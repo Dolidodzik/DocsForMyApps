@@ -10,6 +10,9 @@ import { TextComponent } from './text/text.component';
 import { OverviewComponent } from './overview/overview.component';
 import { HomeComponent } from './home/home.component';
 
+import { HighlightJsModule } from 'ngx-highlight-js';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,11 +21,12 @@ import { HomeComponent } from './home/home.component';
     CodeblockComponent,
     TextComponent,
     OverviewComponent,
-    HomeComponent
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HighlightJsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

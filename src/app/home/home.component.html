@@ -3,4 +3,19 @@
   </app-header>
   <app-text [text]='Text'>
   </app-text>
+
+  <textarea highlight-js [options]="{}" [lang]="'typescript'">
+/* tslint:disable */
+import { Component } from '@angular/core';
+
+@Component({
+    selector: 'demo',
+    templateUrl: './demo.component.html',
+    styleUrls: ['./demo.component.scss']
+})
+export class DemoComponent {
+    switchStatus: boolean = true;
+}
+</textarea>
+
 </div>
