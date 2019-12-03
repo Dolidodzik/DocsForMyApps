@@ -1,15 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-codeblock',
   templateUrl: './codeblock.component.html',
   styleUrls: ['./codeblock.component.sass']
 })
-export class CodeblockComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+export class CodeblockComponent{
+  @Input() code:string;
 }

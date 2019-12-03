@@ -15,8 +15,10 @@ export class HomeComponent implements OnInit {
 
   Header:string = 'Welcome to MyDocs!';
   Text:string = 'This site is simple styled, piece of documentation for my own, open-source projects. Here you can read how my code works.';
+  Code:string = 'Welcome to MyDocs!';
 
   ngOnInit() {
+    
   }
 
 }
