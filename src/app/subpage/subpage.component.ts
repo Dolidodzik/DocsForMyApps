@@ -6,10 +6,15 @@ import { ActivatedRoute } from "@angular/router";
   templateUrl: './subpage.component.html',
   styleUrls: ['./subpage.component.sass']
 })
+
 export class SubpageComponent implements OnInit {
 
+  subpage = ['foodie', 'overview']
+
   constructor(private route: ActivatedRoute) {
-      console.log(this.route.params.value)
+    this.route.paramMap.subscribe(params => {
+      this.subpage = [params.params.project_name, params.params.category];
+    });
   }
 
   ngOnInit() {

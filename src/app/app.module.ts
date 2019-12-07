@@ -12,7 +12,6 @@ import { TextComponent } from './text/text.component';
 import { HomeComponent } from './home/home.component';
 import { SubpageComponent } from './subpage/subpage.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,
