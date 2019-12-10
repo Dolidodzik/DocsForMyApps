@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Route } from "@angular/router";
+import { ActivatedRoute, Router } from "@angular/router";
 
 
 import json from "./contents.js"
@@ -19,7 +19,7 @@ export class SubpageComponent implements OnInit {
   Text:string = 'This site is simple styled, piece of documentation for my own, open-source projects. Here you can read how my code works.';
   Code:string = 'Welcome to MyDocs!';
 
-  constructor(private route: ActivatedRoute){
+  constructor(private route: ActivatedRoute, private router: Router){
     this.route.params.subscribe( params => {
       this.subpage = [params.project_name, params.category];
     });
@@ -29,7 +29,7 @@ export class SubpageComponent implements OnInit {
       this.contents = json[this.subpage[0]][this.subpage[1]].contents;
     }else{
       console.log("N")
-      //this.router.navigate(['/'])
+      this.router.navigate(['/404'])
     }
     console.log(this.contents)
   }

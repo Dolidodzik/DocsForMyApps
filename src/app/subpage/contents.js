@@ -21,6 +21,20 @@ const json = {
 
     },
   },
+  "typing_speed_test": {
+    "overview":{
+      contents: [
+        new C("header", "Welcome to foodie overview"),
+        new C("text", "Foddie is an app that allows you to search for nearby restaurants (and other places), using google places API, DRF and React"),
+      ]
+    },
+    "typing":{
+
+    },
+    "typingg":{
+
+    },
+  }
 }
 
 export default json

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import json from '../subpage/contents.js';
 
 @Component({
   selector: 'app-navbar',
@@ -6,17 +7,27 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.sass']
 })
 
-export class NavbarComponent implements OnInit {
+export class NavbarComponent{
 
-  constructor() { }
+  choices = ["typing_speed_test", "overview"]
+  json = json
 
-  ngOnInit() {
+  constructor(){
+    console.log(this.categories())
   }
 
   navbarOpen = false;
 
-  toggleNavbar() {
+  toggleNavbar(){
     this.navbarOpen = !this.navbarOpen;
   }
+
+  onOptionsSelected(value){
+     console.log(value);
+   }
+
+   categories(){
+     return json[this.choices[0]]
+   }
 
 }

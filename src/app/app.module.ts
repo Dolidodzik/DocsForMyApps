@@ -11,6 +11,7 @@ import { CodeblockComponent } from './codeblock/codeblock.component';
 import { TextComponent } from './text/text.component';
 import { HomeComponent } from './home/home.component';
 import { SubpageComponent } from './subpage/subpage.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { SubpageComponent } from './subpage/subpage.component';
     TextComponent,
     HomeComponent,
     SubpageComponent,
+    NotFoundComponent,
   ],
   imports: [
     BrowserModule,
