@@ -8,4 +8,7 @@ import { Component, Input } from '@angular/core';
 
 export class CodeblockComponent{
   @Input() code:string;
+  constructor(){
+    console.log()
+  }
 }

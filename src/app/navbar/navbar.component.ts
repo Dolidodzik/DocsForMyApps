@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import json from '../subpage/contents.js';
+import { ActivatedRoute, Router } from "@angular/router";
+
 
 @Component({
   selector: 'app-navbar',
@@ -9,14 +11,13 @@ import json from '../subpage/contents.js';
 
 export class NavbarComponent{
 
+  /* First element is project name, second is category/part of application name */
   choices = ["typing_speed_test", "overview"]
   json = json
 
-  constructor(){
-    //console.log(this.categories())
-  }
-
   navbarOpen = false;
+
+  constructor(private router: Router){}
 
   toggleNavbar(){
     this.navbarOpen = !this.navbarOpen;
@@ -24,7 +25,17 @@ export class NavbarComponent{
 
   onProjectClick($event){
     this.choices[0] = $event.target.innerHTML.trim();
-    this.choices[1] = "overview"
+    this.choices[1] = "overview";
+    this.redirect();
+  }
+
+  onCategoryClick($event){
+    this.choices[1] = $event.target.innerHTML.trim();
+    this.redirect();
+  }
+
+  redirect(){
+    this.router.navigateByUrl( "project/"+this.choices[0]+"/"+this.choices[1] );
   }
 
   categories(){ return json[this.choices[0]]; }

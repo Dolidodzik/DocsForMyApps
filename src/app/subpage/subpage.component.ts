@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from "@angular/router";
 
-
 import json from "./contents.js"
 
 @Component({
@@ -29,9 +28,9 @@ export class SubpageComponent implements OnInit {
       this.contents = json[this.subpage[0]][this.subpage[1]].contents;
     }else{
       console.log("N")
-      this.router.navigate(['/404'])
+      //this.router.navigate(['/404'])
     }
-    console.log(this.contents)
+    this.Header = "SUBPAGE!!!"
   }
 
   ngOnInit(){

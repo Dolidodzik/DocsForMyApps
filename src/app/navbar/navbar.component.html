@@ -17,7 +17,7 @@
         <div class="nav-link dropdown-toggle" data-toggle="dropdown"> Project: {{ choices[0] }} </div>
         <div class="dropdown-menu">
 
-          <a class="dropdown-item" href="#"
+          <a class="dropdown-item"
             *ngFor="let item of json | keyvalue"
             (click)="onProjectClick($event)"
           >
@@ -31,8 +31,10 @@
         <div class="nav-link dropdown-toggle" data-toggle="dropdown"> Category {{ choices[1] }} </div>
         <div class="dropdown-menu">
 
-          <a class="dropdown-item" href="#"
-            *ngFor="let item of categories() | keyvalue">
+          <a class="dropdown-item" 
+            *ngFor="let item of categories() | keyvalue"
+            (click)="onCategoryClick($event)"
+          >
             {{item.key}}
           </a>
 
