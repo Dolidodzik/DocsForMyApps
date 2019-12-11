@@ -18,7 +18,10 @@
         <div class="dropdown-menu">
 
           <a class="dropdown-item" href="#"
-            *ngFor="let item of json | keyvalue"> {{item.key}}:{{item.value}}
+            *ngFor="let item of json | keyvalue"
+            (click)="onProjectClick($event)"
+          >
+          {{item.key}}
           </a>
 
         </div>
@@ -30,7 +33,7 @@
 
           <a class="dropdown-item" href="#"
             *ngFor="let item of categories() | keyvalue">
-            {{item.key}}:{{item.value}}
+            {{item.key}}
           </a>
 
         </div>

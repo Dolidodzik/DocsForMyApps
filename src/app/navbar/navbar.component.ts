@@ -13,7 +13,7 @@ export class NavbarComponent{
   json = json
 
   constructor(){
-    console.log(this.categories())
+    //console.log(this.categories())
   }
 
   navbarOpen = false;
@@ -22,12 +22,11 @@ export class NavbarComponent{
     this.navbarOpen = !this.navbarOpen;
   }
 
-  onOptionsSelected(value){
-     console.log(value);
-   }
+  onProjectClick($event){
+    this.choices[0] = $event.target.innerHTML.trim();
+    this.choices[1] = "overview"
+  }
 
-   categories(){
-     return json[this.choices[0]]
-   }
+  categories(){ return json[this.choices[0]]; }
 
 }
