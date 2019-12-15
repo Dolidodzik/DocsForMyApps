@@ -14,23 +14,18 @@ export class SubpageComponent implements OnInit {
   subpage = ['foodie', 'overview']
   contents = null
 
-  Header:string = 'Welcome to MyDocs!';
-  Text:string = 'This site is simple styled, piece of documentation for my own, open-source projects. Here you can read how my code works.';
-  Code:string = '"let something = 1"';
-
   constructor(private route: ActivatedRoute, private router: Router){
     this.route.params.subscribe( params => {
       this.subpage = [params.project_name, params.category];
+      if( json[this.subpage[0]] && json[this.subpage[0]][this.subpage[1]] ){
+        this.contents = json[this.subpage[0]][this.subpage[1]].contents;
+      }else{
+        this.router.navigate(['/404'])
+      }
     });
 
-    if( json[this.subpage[0]] && json[this.subpage[0]][this.subpage[1]] ){
-      console.log("JD")
-      this.contents = json[this.subpage[0]][this.subpage[1]].contents;
-    }else{
-      console.log("N")
-      //this.router.navigate(['/404'])
-    }
-    this.Header = "SUBPAGE!!!"
+
+    console.log(this.contents)
   }
 
   ngOnInit(){

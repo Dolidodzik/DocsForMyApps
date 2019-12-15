@@ -1,6 +1,5 @@
 import { Component, Input } from '@angular/core';
-import * as prism from 'prismjs';
-
+import * as Prism from 'prismjs';
 
 @Component({
   selector: 'app-codeblock',
@@ -10,10 +9,5 @@ import * as prism from 'prismjs';
 
 export class CodeblockComponent{
   @Input() code:string;
-  language = 'html';
-  prism = prism;
-  content = '<p>test</p>';
-  constructor(){
-    console.log(this.content)
-  }
+  @Input() language:string;
 }

@@ -11,9 +11,9 @@
 
 
   <div class="collapse navbar-collapse" [ngClass]="{ 'show': navbarOpen }">
-    <ul class="navbar-nav mr-auto">
+    <div class="navbar-nav mr-auto">
 
-      <li class="nav-item dropdown">
+      <div class="nav-item dropdown">
         <div class="nav-link dropdown-toggle" data-toggle="dropdown"> Project: {{ choices[0] }} </div>
         <div class="dropdown-menu">
 
@@ -25,13 +25,13 @@
           </a>
 
         </div>
-      </li>
+      </div>
 
       <div class="nav-item dropdown" >
-        <div class="nav-link dropdown-toggle" data-toggle="dropdown"> Category {{ choices[1] }} </div>
+        <div class="nav-link dropdown-toggle" data-toggle="dropdown"> Category: {{ choices[1] }} </div>
         <div class="dropdown-menu">
 
-          <a class="dropdown-item" 
+          <a class="dropdown-item"
             *ngFor="let item of categories() | keyvalue"
             (click)="onCategoryClick($event)"
           >
@@ -41,6 +41,6 @@
         </div>
       </div>
 
-    </ul>
+    </div>
   </div>
 </nav>

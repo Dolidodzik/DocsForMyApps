@@ -1,10 +1,17 @@
 <div class="container">
 
-  <app-header [title]='Header'>
-  </app-header>
-  <app-text [text]='Text'>
-  </app-text>
-  <app-codeblock [code]='Code'>
-  </app-codeblock>
+  <div *ngFor="let item of contents">
+
+    <app-header [title]='item.content' *ngIf='item.type == "header" ' >
+    </app-header>
+
+    <app-text [text]='item.content' *ngIf='item.type == "text" ' >
+    </app-text>
+
+    <app-codeblock [code]='item.content' [language]='item.type'
+      *ngIf='item.type != "header" && item.type != "text" '>
+    </app-codeblock>
+
+  </div>
 
 </div>
