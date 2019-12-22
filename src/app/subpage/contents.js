@@ -11,8 +11,7 @@ const json = {
     "overview":{
       contents: [
         new C("header", "Welcome to foodie overview"),
-        new C("text", "Foddie is an app that allows you to search for nearby restaurants (and other places), using google places API, DRF and React"),
-        new C("javascript", "let somevariable = 1;"),
+        new C("text", "<div class='text-type'> <span>Foodie</span> is an app that allows user to search for nearby restaurants (and other places). Created using google places API, Django Rest Framework and React. Check out <a href='https://github.com/Dolidodzik/foodie' target='_blank'> GitHub project. </a> </div>"),
       ]
     },
     "backend_overview":{
@@ -29,8 +28,8 @@ const json = {
   "typing_speed_test": {
     "overview":{
       contents: [
-        new C("header", "typing speed test some header"),
-        new C("text", "typing speed test some text"),
+        new C("header", "Typing Speed Test"),
+        new C("text", "<div> Application that allows user to test his typing skills, user can change settings to suit his needs. After typing user can look at statistics of his typing. I created it mainly to get familiar with Vue. <a href='https://github.com/Dolidodzik/typingspeedtest' target='_blank'> GitHub project. </a>  </div>"),
       ]
     },
     "typing":{

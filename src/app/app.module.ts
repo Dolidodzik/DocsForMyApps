@@ -1,8 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { HighlightJsModule } from 'ngx-highlight-js';
 import { PrismModule } from '@ngx-prism/core';
+import {NgPipesModule} from 'ngx-pipes';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -28,8 +28,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HighlightJsModule,
     PrismModule,
+    NgPipesModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
