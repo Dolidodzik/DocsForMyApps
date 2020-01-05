@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from "@angular/router";
 
-import json from "./contents.js"
+import json from "./contents/contents.js"
 
 @Component({
   selector: 'app-subpage',

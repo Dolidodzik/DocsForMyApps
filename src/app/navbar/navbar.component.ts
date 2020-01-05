@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import json from '../subpage/contents.js';
+import json from '../subpage/contents/contents.js';
 import { ActivatedRoute, Router } from "@angular/router";
 
 
