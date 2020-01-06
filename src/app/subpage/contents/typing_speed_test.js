@@ -1,7 +1,7 @@
 import C from "./CClass.js"
 
 const typing_speed_test = {
-  "overview":{
+  "1. overview":{
     contents: [
 
 // OVERVIEW
@@ -92,7 +92,7 @@ new C("html", `<!-- Every component has element with specific id, that is used t
   },
 
   // SETTINGS COMPONENT
-  "settings_component":{
+  "2. settings_component":{
     contents: [
 
 new C("header", "First component, first view - settings"),
@@ -121,7 +121,7 @@ new C("html", `<!-- clicking on this element will call above function, and v-scr
 
     ]
   },
-  "typing_component":{
+  "3. typing_component":{
     contents: [
 new C("header", "Second component is typing - most important component here"),
 new C("text", "Here user got scrolled after submitting settings in previous component. Here he have to complete typing with selected settings, words are random. What about data()? There are many simple variables, with names that tells a lot, you will be able to see how they are excatly used later Below you can see defaults."),
@@ -312,7 +312,7 @@ new C("text", "That's pretty much it about this component, however there's still
   },
 
   // endscreen component
-  "end_screen_component":{
+  "4. end_screen_component":{
     contents: [
 
 new C("header", "end_screen component"),
@@ -354,7 +354,7 @@ new C("html",`<!-- If user hadn't finished typing at least once, so there aren't
 
     ]
   },
-  "final_summary":{
+  "5. final_summary":{
     contents: [
       new C("header", "Final summary"),
       new C("text", "I am pretty glad with this project - I got familiar with Vue, now I can create app with that - I know all the needed basic concepts and if it will be required I have solid ground to learn more advanced ones. Overall it was nice experience - it taught me a lot. Also, when app was done I spent some time practicing my typing skills, happy typing!"),
