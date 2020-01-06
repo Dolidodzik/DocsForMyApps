@@ -1,4 +1,6 @@
 import C from "./CClass.js"
+
+/* Every project is represented by separate file (that is spaghetti code, but as long as Docs are only for my presonal projects, and it's easy for me to manage that spaghetti */
 import typing_speed_test from "./typing_speed_test.js"
 
 const json = {
